@@ -9,6 +9,6 @@
 
 ## Cloudflare設定
 
-Pagesプロジェクトへ接続し、既存D1を`DB`というBinding名で設定してください。計測先テーブルは既存の`diagnosis_daily_stats`を使用します。
+Pagesプロジェクトへ接続し、`PRIVATE_ANALYTICS_ORIGIN`と`SITE_BYPASS_TOKEN`をサーバー側環境変数として設定してください。公開LPの計測APIが所有者限定SNS OSの既存計測APIへ安全に中継します。
 
-GitHub Pagesだけで公開した場合、画面は動作しますがPages FunctionsとD1計測は動作しません。計測を維持する本番公開にはCloudflare Pagesを使用してください。
+GitHub Pagesだけで公開した場合、画面は動作しますがPages Functionsと既存D1計測は動作しません。計測を維持する本番公開にはCloudflare Pagesを使用してください。
